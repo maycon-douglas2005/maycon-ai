@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maycon AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="chat-screen">
+      <header class="chat-header">
+        <img src="eu.jpeg" class="avatar" alt="Foto do Maycon" />
+
+        <div>
+          <h2>Maycon AI</h2>
+          <span>Sempre online para você 💖</span>
+        </div>
+
+        <div class="header-icons">
+          <span id="playVoice" onclick="playCurrentAudio()">☎</span>
+          <span>⋮</span>
+        </div>
+      </header>
+
+      <main class="chat-area" id="chatArea">
+        <div class="message-row bot-row">
+          <img src="eu.jpeg" class="mini-avatar" alt="Foto do Maycon" />
+          <div>
+            <div class="message bot">
+              Oi, meu amor. Como foi o seu dia hoje?
+            </div>
+            <small>18:30</small>
+          </div>
+        </div>
+
+        <div class="options">
+          <button onclick="sendOption('Oi')">Oi</button>
+          <button onclick="sendOption('Estou com saudade')">
+            Estou com saudade
+          </button>
+          <button onclick="sendOption('Estou triste')">Estou triste</button>
+          <button onclick="sendOption('Você me ama?')">Você me ama?</button>
+          <button onclick="sendOption('Me faz rir')">Me faz rir</button>
+          <button onclick="clearChat()" class="clear-btn">
+            Limpar conversa
+          </button>
+        </div>
+      </main>
+
+      <footer class="input-area disabled">
+        <span class="mic">🎙</span>
+        <input disabled placeholder="Digite algo amoroso..." />
+        <button disabled>➤</button>
+      </footer>
+
+      <audio id="audioPlayer"></audio>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
